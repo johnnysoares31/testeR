@@ -1,0 +1,51 @@
+---
+title: "N20_Analysis"
+author: "Johnny Soares"
+date: "16 de fevereiro de 2017"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Setting Working Directory
+
+I am setting my working directory which is located on Desktop.
+
+```{r}
+setwd("C:/Users/johnny.soares/Desktop/testeR/Rcode")
+```
+
+## Read Input
+
+I am reading N20 daa
+
+```{r}
+
+N2O2014<-read.csv("./../data/N2O2014.csv")
+```
+
+## Creating Histogram
+
+I am creating histogram of N20.
+
+```{r}
+hist(x=N2O2014$N2Olog)
+```
+
+## Running ANOVA 
+
+We run ANOVA on N2O data
+```{r}
+anova<-aov(N2O2014$N2Olog~N2O2014$Fonte)
+anova
+```
+
+
+# Plotting N20
+we are plotting N2o versus fertilizer treatments
+```{r}
+plot(N2O2014$Fonte, N2O2014$N2Olog)
+```
+
