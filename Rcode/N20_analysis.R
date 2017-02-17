@@ -21,3 +21,6 @@ summary(anova)
 png("Output/N20_plot.png")
 plot(N2O2014$Fonte, N2O2014$N2Olog)
 dev.off()
+
+#Normal distribution
+shapiro.test(resid(anova))
