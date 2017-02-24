@@ -61,4 +61,7 @@ shapiro.test(resid(anova))
 ```{r}
 TukeyHSD(anova)
 ```
-
+#histogram of resuidual of anova
+```{r}
+hist(x=resid(anova))
+```
